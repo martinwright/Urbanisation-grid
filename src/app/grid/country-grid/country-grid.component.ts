@@ -13,8 +13,8 @@ import {MessageService} from '../../services/message.service';
 export class CountryGridComponent implements OnInit, OnDestroy {
 
     @Input() rowData;
-    private _gridOptions: GridOptions;
-    private rowSelection;
+    public gridOptions: GridOptions;
+    public rowSelection;
     private _api: GridApi;
     private _subscription: Subscription;
 
