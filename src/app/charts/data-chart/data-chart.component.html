@@ -1,19 +1,21 @@
-<div style="height: 100%; width: 100%; box-sizing: border-box;">
+<!--<div style="height: 100%; width: 100%; box-sizing: border-box;">-->
   <ag-grid-angular
           style="height: 100%; width: 100%;"
           class="ag-theme-balham"
           [rowData]="rowData"
           [columnDefs]="columnDefs"
           [enableSorting]="true"
-          [enableFilter]="true"
+          [enableFilter]="false"
           [gridOptions]="gridOptions"
           [rowSelection]="rowSelection"
           (rowSelected)="onRowSelected($event)"
           (selectionChanged)="onSelectionChanged($event)"
           (gridReady)="onGridReady($event)"
           rowSelection="single"
+          (modelUpdated)="onModelUpdated()"
+          [floatingFilter]="true"
   >
   </ag-grid-angular>
-  <button style="margin-bottom: 10px" (click)="onClicked()" class="btn btn-primary">Invoke Filter Instance Method</button>
+  <!--<button style="margin-bottom: 10px" (click)="onClicked()" class="btn btn-primary">Invoke Filter Instance Method</button>-->
 
-</div>
+<!--</div>-->

@@ -23,7 +23,6 @@ export class CountryGridComponent implements OnInit, OnDestroy {
         {
             headerName: 'Country',
             field: 'Country or Area',
-            width: 280,
             filter: 'agTextColumnFilter'
         }
     ];
@@ -54,15 +53,15 @@ export class CountryGridComponent implements OnInit, OnDestroy {
     }
 
     onRowSelected(event) {
-        //console.log('onRowSelected ', event);
+        // console.log('onRowSelected ', event);
         if (event.node && event.node.data && event.node.selected) {
-            //console.log('*** messageService.changeCountry ');
+            // console.log('*** messageService.changeCountry ');
             this.messageService.changeCountry(event.node.data['Country or Area'] as string);
         }
     }
 
     onSelectionChanged(event) {
-        //console.log('onSelectionChanged ', event.node);
+        // console.log('onSelectionChanged ', event.node);
     }
 
     onGridReady(params: GridReadyEvent) {

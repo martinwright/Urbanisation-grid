@@ -7,10 +7,24 @@
 </div>-->
 
 
-<div class="wrapper">
+<!--<div class="wrapper">
   <div class="box header"><app-header></app-header></div>
   <div class="box sidebar"><app-country-grid [rowData]="uniqueCountryData"></app-country-grid></div>
   <div class="box content"> <app-data-chart style="width: 100%"></app-data-chart></div>
   <div class="box footer">Footer</div>
-</div>
+</div>-->
 
+<div class="wrapper">
+    <header class="box header">Header</header>
+    <main class="main">
+        <aside class="box sidebar">
+            <app-country-grid [rowData]="uniqueCountryData"></app-country-grid>
+        </aside>
+        <article class="box content">
+            <app-data-chart style="width: 100%"></app-data-chart>
+        </article>
+        <!--<nav>Nav</nav>-->
+
+    </main>
+    <footer class="box footer">Footer</footer>
+</div>
