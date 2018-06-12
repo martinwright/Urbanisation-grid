@@ -1,0 +1,37 @@
+{
+  "places": [
+    {
+      "Country or Area": "Albania",
+      "Year": "2016",
+      "Area": "Total",
+      "Sex": "Both Sexes",
+      "Record Type": "Estimate - de facto",
+      "Reliability": "Final figure, complete",
+      "Source Year": "2016",
+      "Value": "2886026",
+      "Value Footnotes": ""
+    },
+    {
+      "Country or Area": "Albania",
+      "Year": "2016",
+      "Area": "Total",
+      "Sex": "Both Sexes",
+      "Record Type": "Estimate - de facto",
+      "Reliability": "Final figure, complete",
+      "Source Year": "2017",
+      "Value": "2876101",
+      "Value Footnotes": ""
+    },
+    {
+      "Country or Area": "Albania",
+      "Year": "2016",
+      "Area": "Total",
+      "Sex": "Male",
+      "Record Type": "Estimate - de facto",
+      "Reliability": "Final figure, complete",
+      "Source Year": "2017",
+      "Value": "1456000",
+      "Value Footnotes": ""
+    }
+  ]
+}

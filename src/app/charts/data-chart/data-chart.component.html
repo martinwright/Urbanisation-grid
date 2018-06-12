@@ -1,0 +1,19 @@
+<div style="height: 100%; width: 100%; box-sizing: border-box;">
+  <ag-grid-angular
+          style="height: 100%;width: 100%;"
+          class="ag-theme-balham"
+          [rowData]="rowData"
+          [columnDefs]="columnDefs"
+          [enableSorting]="true"
+          [enableFilter]="true"
+          [gridOptions]="gridOptions"
+          [rowSelection]="rowSelection"
+          (rowSelected)="onRowSelected($event)"
+          (selectionChanged)="onSelectionChanged($event)"
+          (gridReady)="onGridReady($event)"
+          rowSelection="single"
+  >
+  </ag-grid-angular>
+  <button style="margin-bottom: 10px" (click)="onClicked()" class="btn btn-primary">Invoke Filter Instance Method</button>
+
+</div>

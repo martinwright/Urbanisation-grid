@@ -1,0 +1,22 @@
+<div style="height: 100%; box-sizing: border-box;">
+    <ag-grid-angular
+            style="width: 350px; height: 100%;"
+            class="ag-theme-balham"
+            [rowData]="rowData"
+            [columnDefs]="columnDefs"
+            [enableSorting]="true"
+            [enableFilter]="false"
+            [gridOptions]="gridOptions"
+            [rowSelection]="rowSelection"
+            (rowSelected)="onRowSelected($event)"
+            (selectionChanged)="onSelectionChanged($event)"
+            (gridReady)="onGridReady($event)"
+            rowSelection="single"
+            [floatingFilter]="true"
+            (onGridSizeChanged)="gridSizeChanged($event)"
+    >
+    </ag-grid-angular>
+    <button (click)="sendMessage()">Send Message</button>
+    <button (click)="clearMessage()">Clear Message</button>
+    <button (click)="reload()">Reload</button>
+</div>
