@@ -3,7 +3,6 @@ import {GridApi, GridOptions, GridReadyEvent} from 'ag-grid';
 import {MessageService} from '../../services/message.service';
 import {Subscription} from 'rxjs';
 import {UNDataRecord, UNUniqueDataRecord} from '../../model/UNDataModel';
-import { Slider}
 
 @Component({
     selector: 'app-data-chart',
@@ -92,19 +91,14 @@ export class DataChartComponent implements OnInit, OnDestroy {
     }
 
     onGridReady(params: GridReadyEvent) {
-        // console.log('*** onGridReady ');
         this.gridApi = params.api;
         this.gridColumnApi = params.columnApi;
 
         this.subscription = this.messageService.undataUpdated().subscribe(message => {
-            // console.log('message ', typeof message);
-            // console.log('message ', message);
             this.gridApi.setRowData(message as UNDataRecord[]);
         });
 
         this.subscription = this.messageService.onCountryChange().subscribe(message => {
-            // console.log('message ', typeof message);
-            // console.log('message ', message);
             this.onCountryChange(message as string);
         });
 
@@ -130,7 +124,6 @@ export class DataChartComponent implements OnInit, OnDestroy {
     }
 
     onCountryChange(country: string) {
-        // console.log('onCountryChange ', country);
         if (this.selectedCountry !== country) {
             this.selectedCountry = country;
             this.gridApi.onFilterChanged();

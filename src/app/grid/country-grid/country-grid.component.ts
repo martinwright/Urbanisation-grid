@@ -32,7 +32,6 @@ export class CountryGridComponent implements OnInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        // unsubscribe to ensure no memory leaks
         this._subscription.unsubscribe();
     }
 
@@ -55,7 +54,6 @@ export class CountryGridComponent implements OnInit, OnDestroy {
     onRowSelected(event) {
         // console.log('onRowSelected ', event);
         if (event.node && event.node.data && event.node.selected) {
-            // console.log('*** messageService.changeCountry ');
             this.messageService.changeCountry(event.node.data['Country or Area'] as string);
         }
     }

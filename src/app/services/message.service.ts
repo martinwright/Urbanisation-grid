@@ -39,7 +39,6 @@ export class MessageService {
         return this.undata.asObservable();
     }
     dataLoaded(data: UNDataRecord[]) {
-        console.log('dataLoaded ', typeof data);
         this.undata.next( data );
     }
 
